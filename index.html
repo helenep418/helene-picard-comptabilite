@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services de comptabilité Hélène Picard</title>
+  <meta name="description" content="Tenue de livres, impôts particuliers et travailleurs autonomes. Dépôt de documents sécurisé." />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111826;
+      --text:#e9eef6;
+      --muted:#b7c2d1;
+      --accent:#ff7a18;
+      --accent2:#ffb26b;
+      --border:rgba(255,255,255,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 15% 0%, rgba(255,122,24,0.25), transparent 60%),
+                  radial-gradient(900px 600px at 85% 10%, rgba(255,178,107,0.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      position:sticky; top:0; z-index:10;
+      background: rgba(11,15,20,0.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px; padding:14px 24px;
+    }
+    .brand{
+      font-weight:800; letter-spacing:0.2px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .dot{width:10px;height:10px;border-radius:50%; background:var(--accent)}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .links a{opacity:.9;text-decoration:none}
+    .links a:hover{opacity:1;text-decoration:underline}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:12px; border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      text-decoration:none; font-weight:650;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#151515; border:none;
+    }
+    .hero{
+      padding:46px 0 20px;
+      display:grid; gap:18px;
+    }
+    .hero h1{margin:0; font-size:clamp(28px, 3.2vw, 44px); line-height:1.1}
+    .hero p{margin:0; color:var(--muted); font-size:clamp(15px, 1.2vw, 18px)}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .grid{
+      display:grid; grid-template-columns: repeat(12, 1fr);
+      gap:16px; margin:24px 0 0;
+    }
+    .card{
+      background: rgba(17,24,38,0.78);
+      border: 1px solid var(--border);
+      border-radius:18px; padding:18px;
+    }
+    .span6{grid-column: span 6}
+    .span4{grid-column: span 4}
+    .span12{grid-column: span 12}
+    @media (max-width:820px){
+      .span6,.span4{grid-column: span 12}
+      .links{display:none}
+    }
+    h2{margin:0 0 8px; font-size:22px}
+    h3{margin:0 0 10px; font-size:18px}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border); background:rgba(255,255,255,0.03);
+      color:var(--muted); font-size:13px;
+    }
+    footer{
+      margin-top:30px; padding:24px 0; color:var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .two-col{display:grid; grid-template-columns:1.2fr .8fr; gap:16px}
+    @media (max-width:820px){ .two-col{grid-template-columns:1fr} }
+    .steps{counter-reset:step}
+    .steps li{margin:10px 0}
+    .steps li::marker{color:var(--accent)}
+    .note{
+      border-left:3px solid var(--accent);
+      padding:10px 12px; background:rgba(255,122,24,0.08);
+      border-radius:12px; color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav wrap">
+      <div class="brand"><span class="dot"></span> Services de comptabilité Hélène Picard</div>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#depot">Déposer mes documents</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn primary" href="#depot">Déposer mes documents</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="pill">Tenue de livres • Impôts • Suivi personnalisé</span>
+      <h1>Comptabilité claire. Impôts sans casse-tête. Dépôt de documents sécurisé.</h1>
+      <p>Je t’accompagne de façon simple et efficace : tenue de livres, impôts particuliers et travailleurs autonomes, avec un suivi humain et structuré.</p>
+      <div class="cta">
+        <a class="btn primary" href="#depot">Déposer mes documents</a>
+        <a class="btn" href="#contact">Me contacter</a>
+      </div>
+    </section>
+
+    <section class="grid" id="services">
+      <div class="card span4">
+        <h3>Tenue de livres</h3>
+        <p class="muted">Organisation, saisie et suivi (mensuel ou trimestriel).</p>
+        <ul>
+          <li>Revenus et dépenses</li>
+          <li>Conciliation & suivi</li>
+          <li>Classement des pièces</li>
+        </ul>
+      </div>
+
+      <div class="card span4">
+        <h3>Impôts</h3>
+        <p class="muted">Particuliers, travailleurs autonomes, optimisation et conformité.</p>
+        <ul>
+          <li>Déclarations</li>
+          <li>Crédits & déductions</li>
+          <li>Questions & validation</li>
+        </ul>
+      </div>
+
+      <div class="card span4">
+        <h3>Support & conseils</h3>
+        <p class="muted">Un point de contact simple pour avancer vite et bien.</p>
+        <ul>
+          <li>Check-list de documents</li>
+          <li>Réponses claires</li>
+          <li>Suivi personnalisé</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" id="depot">
+      <div class="card span12 two-col">
+        <div>
+          <h2>Déposer mes documents (sécurisé)</h2>
+          <p class="muted">
+            Utilise le lien ci-dessous pour déposer tes documents facilement.
+            Évite d’envoyer des fichiers sensibles par courriel si tu peux.
+          </p>
+          <a class="btn primary" href="TON_LIEN_DE_DEPOT_ICI" target="_blank" rel="noopener">Accéder au dépôt sécurisé</a>
+          <div style="height:12px"></div>
+          <div class="note">
+            Astuce : regroupe tes photos en PDF si possible (ça accélère le traitement).
+            Si tu veux, je peux te donner une mini check-list de documents selon ta situation.
+          </div>
+        </div>
+
+        <div>
+          <h3>Comment ça marche</h3>
+          <ol class="steps muted">
+            <li>Tu déposes tes fichiers via le portail</li>
+            <li>Je confirme la réception</li>
+            <li>Je te contacte s’il manque quelque chose</li>
+            <li>On finalise et on transmet</li>
+          </ol>
+          <p class="muted" style="margin-top:12px;">
+            Formats acceptés : PDF, JPG/PNG, fichiers comptables courants.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="apropos">
+      <div class="card span12">
+        <h2>À propos</h2>
+        <p class="muted">
+          Je mise sur une approche simple : de la clarté, de la rigueur, et une communication directe.
+          Mon objectif : te faire sauver du temps et te enlever du stress.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" id="contact">
+      <div class="card span12">
+        <h2>Contact</h2>
+        <p class="muted">Écris-moi, je te réponds dès que possible.</p>
+        <p class="muted">
+          Courriel : <a href="mailto:toncourriel@exemple.com">toncourriel@exemple.com</a><br/>
+          Téléphone : <a href="tel:+15145551234">514-555-1234</a><br/>
+          Région : Portneuf / Québec (à ajuster)
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">© <span id="y"></span> Services de comptabilité Hélène Picard • Tous droits réservés</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
